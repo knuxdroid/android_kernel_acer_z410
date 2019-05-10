@@ -1,0 +1,22 @@
+external
+========
+
+For building external projects, take the following commands as reference:
+
+$ mkdir ~/AOSP
+
+$ cd AOSP
+
+Sync the corresponding codebase from Android website:
+
+$ repo init -u https://android.googlesource.com/platform/manifest -b android-4.4.4_r2
+
+$ repo sync
+
+Copy all folders from external_src to ~/AOSP/external (replace the original folders):
+
+$ cp -r /PATH_TO/external_src/*  ~/AOSP/external/
+
+$ source build/envsetup.sh
+
+$ make

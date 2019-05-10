@@ -1,0 +1,18 @@
+kernel
+======
+
+Get the prebuilt cross compiler from AOSP website:
+
+$ git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.6
+
+Add required cross compiler to PATH:
+
+$ export PATH=/YOUR_TOOLCHAIN_PATH/arm-eabi-4.6/bin:$PATH
+
+$ export CROSS_COMPILE=arm-eabi-
+
+Then use the following commands to build the kernel:
+
+$ cd kernel_src/
+
+$ ./makeMtk simcom6752_lwt_cu n k
